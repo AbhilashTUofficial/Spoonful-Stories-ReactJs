@@ -1,10 +1,11 @@
 // TopBar component
 import React from 'react';
+import './style.css';
 
 const TopBar: React.FC = () => {
     return (
-        <div>
-            <h1>TopBar</h1>
+        <div className='topbarCont'>
+            <div>Top Bar</div>
         </div>
     );
 };

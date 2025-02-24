@@ -1,0 +1,13 @@
+.homeCont{
+    margin: 0;
+    padding: 0;
+}
+.landingCont{
+
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-image: url('../../assets/landing.png');
+    background-size: cover;
+    background-position: center;
+    border:1px solid white;
+}
