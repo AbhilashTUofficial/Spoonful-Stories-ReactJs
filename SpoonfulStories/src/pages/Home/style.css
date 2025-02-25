@@ -1,13 +1,23 @@
 .homeCont{
     margin: 0;
     padding: 0;
+
 }
 .landingCont{
 
     height: calc(100vh - 80px);
-    width: 100%;
-    background-image: url('../../assets/landing.png');
-    background-size: cover;
-    background-position: center;
+    border:1px solid white;
+
+    
+}
+
+.soupCarosoulCont{
+
+    height: calc(60vh - 80px);
+    border:1px solid white;
+}
+.trendyRecipesCont{
+
+    height: calc(80vh - 80px);
     border:1px solid white;
 }
