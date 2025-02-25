@@ -4,7 +4,7 @@ import './style.css'
 
 
  const Contact: React.FC = () => {
-     alert("contact");
+   
 
     return(
         <h1>Contact</h1>
