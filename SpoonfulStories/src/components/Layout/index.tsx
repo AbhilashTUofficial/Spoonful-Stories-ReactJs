@@ -4,7 +4,7 @@ import TopBar from "../TopBar";
 const Layout = () => {
     return (
         <>
-            <TopBar />  {/* This remains persistent */}
+            <TopBar/>  {/* This remains persistent */}
             <Outlet />  {/* Page content changes here */}
         </>
     );
