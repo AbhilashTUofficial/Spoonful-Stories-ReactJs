@@ -1,7 +1,12 @@
 .topbarCont{
-    color: white;
     display: flex;
     height: 80px;
-    border:1px solid white;
+    border:1px solid dimgray;
     margin: 0;
+    padding: 0 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 60px;
 }

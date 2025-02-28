@@ -2,6 +2,7 @@
 .footerCont{
     margin: 0;
     padding: 0;
-    border:1px solid white;
+    border:1px solid dimgray;
+
     height: calc(60vh - 80px);
 }

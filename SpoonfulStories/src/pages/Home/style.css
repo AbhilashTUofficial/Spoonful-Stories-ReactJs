@@ -6,7 +6,8 @@
 .landingCont{
 
     height: calc(100vh - 80px);
-    border:1px solid white;
+    border:1px solid dimgray;
+
 
     
 }
@@ -14,10 +15,12 @@
 .soupCarosoulCont{
 
     height: calc(60vh - 80px);
-    border:1px solid white;
+    border:1px solid dimgray;
+
 }
 .trendyRecipesCont{
 
     height: calc(80vh - 80px);
-    border:1px solid white;
+    border:1px solid dimgray;
+
 }
