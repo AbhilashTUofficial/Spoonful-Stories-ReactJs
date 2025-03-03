@@ -4,16 +4,18 @@
 
 }
 .landingCont{
-
     height: calc(100vh - 80px);
-    border:1px solid dimgray;
-
-
-    
+    position: relative;
+}
+.landingCont>img{
+    width: 100%;
+    height: calc(100vh - 80px);
+    /* no straching */
+    object-fit: cover;
 }
 
-.soupCarosoulCont{
 
+.soupCarosoulCont{
     height: calc(60vh - 80px);
     border:1px solid dimgray;
 

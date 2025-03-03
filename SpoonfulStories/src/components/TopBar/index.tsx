@@ -10,12 +10,15 @@ const TopBar: React.FC = () => {
             </div>
             <div className="tabs">
                 <ul>
-                    <li>Home</li>
                     <li>Recipes</li>
-                    <li>Contact</li>
+                    <li>Learn/How-to</li>
+                    <li>Seasonol Sensations</li>
+                    <li>Shop</li>
                 </ul>
             </div>
-            <div className="trailing"></div>
+            <div className="trailing">
+                <div className="subscribBtn">Subscribe</div>
+            </div>
         </div>
     );
 };
