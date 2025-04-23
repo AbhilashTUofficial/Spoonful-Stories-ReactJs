@@ -1,9 +1,11 @@
 import React from 'react';
 import "./style.css";
 
-const Modal = () => {
+const Modal = ({ children }) => {
     return (
-        <div className="modalCont">Modal</div>
+        <div className="modalCont">
+            {children}
+        </div>
     )
 }
 

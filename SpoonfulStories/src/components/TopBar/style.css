@@ -22,7 +22,7 @@
     text-decoration: none;
     list-style: none;
     display: flex;
-    gap:1.6rem;
+    gap:3rem;
 }
 .subscribBtn{
     background-color: #163968;
