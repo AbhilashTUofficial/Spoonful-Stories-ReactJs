@@ -10,7 +10,6 @@
 .landingCont>img{
     width: 100%;
     height: calc(100vh - 80px);
-    /* no straching */
     object-fit: cover;
 }
 
@@ -75,4 +74,10 @@
 .heroAction:hover{
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
+}
+.contentCont{
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    padding: 0rem 6rem;
 }

@@ -77,13 +77,15 @@ const Home: React.FC = () => {
 
 
             </div>
-            <div className="soupCarosoulCont">
-                <Carosoul items={soups} title="Check our Soup" />
+            <div className="contentCont">
+                <div className="soupCarosoulCont">
+                    <Carosoul items={soups} title="Check our Soup" />
+                </div>
+                <div className="trendyRecipesCont"></div>
+                <div className="recipesBlogCont"></div>
+                <div className="galleryCont"></div>
+                <div className="subscriptionCont"></div>
             </div>
-            <div className="trendyRecipesCont"></div>
-            <div className="recipesBlogCont"></div>
-            <div className="galleryCont"></div>
-            <div className="subscriptionCont"></div>
         </div>
     );
 };
