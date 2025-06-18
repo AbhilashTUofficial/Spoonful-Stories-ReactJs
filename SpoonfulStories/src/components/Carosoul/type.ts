@@ -1,3 +1,5 @@
+import React from "react"
+
 export type carosoulItem = {
     id: number,
     image: string,
@@ -7,6 +9,6 @@ export type carosoulItem = {
 }
 
 export interface carosoulProps {
-    items: carosoulItem[],
+    items: React.JSX.Element[],
     title: string
 }

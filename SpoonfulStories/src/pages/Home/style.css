@@ -12,17 +12,61 @@
     height: calc(100vh - 80px);
     object-fit: cover;
 }
-
-
 .soupCarosoulCont{
-    border:1px solid dimgray;
-    padding: 2rem 0;
+    margin-top: 1rem;
+    gap:1rem;
+}   
+.carosoulItemBasicInfo{
+    border-radius:50%;
+}
+
+.soupCarosoulItem{
+    position: relative;
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    height: 180px;
+    transition: 0.3s ease-in;
+    background-color: transparent;    
+    box-shadow: 2px 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 120px 0px 0px 120px;
+    overflow:hidden;
+    padding: 1rem;
 
 }
-.trendyRecipesCont{
+.soupCarosoulItem:hover{
+    cursor: pointer;
+    width: 500px;
+    transition: 0.3s ease-in-out;
+    left: -50px;
+    padding:  1rem 0 0 0;
+}
+.soupCarosoulItem:hover:first-child{
+    left: 50px;
+}
 
+.soupCarosoulItemImage{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: red;
+}
+.carosoulItemDescription{
+    width: 300px;
+    color: black;
+    margin-top: 2rem;
+}
+
+.trendyRecipesCont{
+    display: flex;
     height: calc(80vh - 80px);
-    border:1px solid dimgray;
+    border:1px solid dimgray;   
+    justify-content: center;
+      align-items: stretch;
+
+
 }
 .heroCont{
     position: absolute;
@@ -78,6 +122,40 @@
 .contentCont{
     margin: 0;
     padding: 0;
-    align-self: center;
-    padding: 0rem 6rem;
+    justify-content: center;
+    }
+.carosoulItemTitle{
+    font-size: 1.2rem;
+    color: darkgray;
+    margin-bottom: 1rem;
+    text-align: center;
 }
+.carosoulItemTitle>span{
+    color: orangered;
+}
+.carosoulItemSubTitle{
+    text-align: center;
+    color: darkgray;
+    margin-bottom: 1rem;
+}
+.cardImage{
+    width: 18rem;
+    height: 12rem;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardDescription{
+    background-color: red;
+    color: black;
+    width: 18rem;
+    display: flex;
+    flex:1;
+    flex-direction: column;
+
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  flex: 1;}
