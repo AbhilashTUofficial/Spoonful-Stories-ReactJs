@@ -2,7 +2,43 @@
 .footerCont{
     margin: 0;
     padding: 0;
-    border:1px solid dimgray;
+    background-color: black;
+}
 
-    height: calc(60vh - 80px);
+.main{
+    background-color: orangered;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.bottom{
+    background-color: black;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: lightgray;
+}
+
+.navigation>tr>td{
+    color: lightgray;
+    padding: 1rem;
+    cursor: pointer;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.navigation>tr>td:hover{
+    text-decoration: underline;
+}
+.quotes{
+    color: lightgray;
+    text-align: center;
+    width: 200px;
+    margin: 12px;
+    align-self: center;
 }

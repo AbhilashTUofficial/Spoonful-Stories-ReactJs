@@ -6,9 +6,14 @@ import Modal from '../../components/Modal';
 import Carosoul from '../../components/Carosoul';
 import { carosoulItem } from '../../components/Carosoul/type';
 import Card from '../../components/Card';
+import Footer from '../../components/Footer';
+import ReactPaginate from 'react-paginate';
+import Pagination from '../../components/Pagination';
 
 const Home: React.FC = () => {
 
+    const shopsSubTitle = "Check Our Shop";
+    const trendyRecipesSubTitle = "Trendy Recipes";
     const soups: carosoulItem[] = [
         {
             id: 1,
@@ -53,6 +58,43 @@ const Home: React.FC = () => {
             link: "Read more"
         },
     ];
+
+
+    const Cards = () => {
+        return (
+            <div className="cardsCont">
+                <Card>
+                    <div className="card">
+                        <img className="cardImage" src="../../public/assets/Images/1.jpg" alt="" />
+                        <div className="cardDescription">
+                            <div className="cardDescriptionTitle">Chiken Fajita</div>
+                            <div className="cardDescriptionSubTitle"><span>Ingredients: </span> chiken, tomato, onion, salt, pepper, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quae! Rerum voluptatum odit eos. Quod est culpa quisquam impedit voluptate quos? Odio facilis, voluptate repudiandae aliquam pariatur ex deserunt amet.</div>
+                        </div>
+                    </div>
+                </Card>
+
+                <Card>
+                    <div className="card">
+                        <img className="cardImage" src="../../public/assets/Images/2.jpg" alt="" />
+                        <div className="cardDescription">
+                            <div className="cardDescriptionTitle">Chiken Fajita</div>
+                            <div className="cardDescriptionSubTitle"><span>Ingredients: </span> chiken, tomato, onion, salt, pepper, Lorem, Rerum voluptatum odit eos. Quod est culpa voluptate repudiandae aliquam pariatur ex deserunt amet.</div>
+                        </div>                        </div>
+                </Card>
+
+                <Card>
+                    <div className="card">
+
+                        <img className="cardImage" src="../../public/assets/Images/3.jpg" alt="" />
+                        <div className="cardDescription">
+                            <div className="cardDescriptionTitle">Chiken Fajita</div>
+                            <div className="cardDescriptionSubTitle"><span>Ingredients: </span> chiken, tomato, onion, salt, pepper, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quae! Rerum voluptatum odit eos. Quod est culpa quisquam impedit voluptate quos? Odio facilis, voluptate repudiandae aliquam pariatur ex deserunt amet.</div>
+                        </div>                        </div>
+                </Card>
+            </div>
+        )
+    }
+
     return (
         <div className='homeCont'>
             <div className="landingCont">
@@ -78,6 +120,7 @@ const Home: React.FC = () => {
             </div>
             <div className="contentCont">
                 <div className="soupCarosoulCont">
+                    <div className="subTitle">{shopsSubTitle.split(" ").slice(0, -1).join(" ")}{" "}<span>{shopsSubTitle.split(" ").slice(-1).join(" ")}</span></div>
                     <Carosoul items={
                         soups.map((item) => {
                             return (
@@ -90,43 +133,20 @@ const Home: React.FC = () => {
                                 </div>
                             )
                         })
-                    } title="Check our Soup" />
+                    } />
                 </div>
+
+                <div className="subTitle">{trendyRecipesSubTitle.split(" ").slice(0, -1).join(" ")}{" "}<span>{trendyRecipesSubTitle.split(" ").slice(-1).join(" ")}</span></div>
+
                 <div className="trendyRecipesCont">
-                    <Card>
-                        <div className="card">
-
-                            <img className="cardImage" src="../../public/assets/Images/1.jpg" alt="" />
-                            <div className="cardDescription">
-                                <div className="cardDescriptionTitle">Chiken Fajita</div>
-                                <div className="cardDescriptionSubTitle"><span>Ingredients: </span> chiken, tomato, onion, salt, pepper, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quae! Rerum voluptatum odit eos. Quod est culpa quisquam impedit voluptate quos? Odio facilis, voluptate repudiandae aliquam pariatur ex deserunt amet.</div>
-                            </div>
-                        </div>
-                    </Card>
-
-                    <Card>
-                        <div className="card">
-
-                            <img className="cardImage" src="../../public/assets/Images/2.jpg" alt="" />
-                            <div className="cardDescription">
-                                <div className="cardDescriptionTitle">Chiken Fajita</div>
-                                <div className="cardDescriptionSubTitle"><span>Ingredients: </span> chiken, tomato, onion, salt, pepper, Lorem, Rerum voluptatum odit eos. Quod est culpa voluptate repudiandae aliquam pariatur ex deserunt amet.</div>
-                            </div>                        </div>
-                    </Card>
-
-                    <Card>
-                        <div className="card">
-
-                            <img className="cardImage" src="../../public/assets/Images/3.jpg" alt="" />
-                            <div className="cardDescription">
-                                <div className="cardDescriptionTitle">Chiken Fajita</div>
-                                <div className="cardDescriptionSubTitle"><span>Ingredients: </span> chiken, tomato, onion, salt, pepper, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quae! Rerum voluptatum odit eos. Quod est culpa quisquam impedit voluptate quos? Odio facilis, voluptate repudiandae aliquam pariatur ex deserunt amet.</div>
-                            </div>                        </div>
-                    </Card>
+                    <Pagination>
+                        <Cards />
+                    </Pagination>
                 </div>
-                <div className="recipesBlogCont"></div>
+                {/* <div className="recipesBlogCont"></div>
                 <div className="galleryCont"></div>
-                <div className="subscriptionCont"></div>
+                <div className="subscriptionCont"></div> */}
+
             </div>
         </div>
     );

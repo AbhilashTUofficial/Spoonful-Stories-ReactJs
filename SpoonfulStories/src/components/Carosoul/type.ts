@@ -10,5 +10,4 @@ export type carosoulItem = {
 
 export interface carosoulProps {
     items: React.JSX.Element[],
-    title: string
 }

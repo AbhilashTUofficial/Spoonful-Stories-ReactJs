@@ -51,22 +51,12 @@
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
-    background-color: red;
 }
-.carosoulItemDescription{
-    width: 300px;
-    color: black;
-    margin-top: 2rem;
-}
+
 
 .trendyRecipesCont{
-    display: flex;
-    height: calc(80vh - 80px);
-    border:1px solid dimgray;   
-    justify-content: center;
-      align-items: stretch;
-
-
+    width: 100%;
+    
 }
 .heroCont{
     position: absolute;
@@ -105,7 +95,6 @@
 }
 .heroAction{
     text-align: center;
-    background-color: orangered;
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 99px;
@@ -138,16 +127,25 @@
     color: darkgray;
     margin-bottom: 1rem;
 }
+.cardsCont{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-content: center;
+    margin: 2rem;
+    width: 70%;
+    margin: auto;
+}
 .cardImage{
-    width: 18rem;
+    min-width: 18rem;
     height: 12rem;
     object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 12px;
+    margin-bottom:12px;
 }
 .cardDescription{
-    background-color: red;
     color: black;
     width: 18rem;
     display: flex;
@@ -158,4 +156,40 @@
 .card{
   display: flex;
   flex-direction: column;
-  flex: 1;}
+  flex: 1;
+  align-items: center;
+
+}
+.cardDescriptionTitle{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.subTitle{
+    text-align: center;
+    margin-top:5rem;
+    color:black;
+    font-size: 1.2rem;
+}
+.subTitle>span{
+    color: orangered;
+}
+.cardDescriptionTitle{
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.cardDescription{
+    text-align: center;
+    margin-bottom: 1rem;
+    color:rgba(0, 0, 0, 0.762);
+}
+
+.paginationCont{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    color: red;
+}
