@@ -1,8 +1,12 @@
 import React from 'react';
 import "./style.css";
 
+
 const Pagination = ({ children }) => {
     return (
+        // <>
+        //     {children}
+        // </>
         <div className="paginationCont">
             <div className="contents">
                 {children}

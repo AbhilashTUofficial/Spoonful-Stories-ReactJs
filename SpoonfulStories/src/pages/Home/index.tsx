@@ -1,6 +1,6 @@
 // Homepage
 
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import "./style.css";
 import Modal from '../../components/Modal';
 import Carosoul from '../../components/Carosoul';
@@ -14,6 +14,16 @@ const Home: React.FC = () => {
 
     const shopsSubTitle = "Check Our Shop";
     const trendyRecipesSubTitle = "Trendy Recipes";
+    const ourGallerySubTitle = "Our Gallery";
+    const recipeBlogsSubTitle = "Recipe Blogs";
+    const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
+    useLayoutEffect(() => {
+        function updateWidth() {
+            setScreenWidth(window.innerWidth);
+        }
+        window.addEventListener('resize', updateWidth);
+        return () => window.removeEventListener('resize', updateWidth);
+    })
     const soups: carosoulItem[] = [
         {
             id: 1,
@@ -60,37 +70,46 @@ const Home: React.FC = () => {
     ];
 
 
-    const Cards = () => {
+    const RecipeCards = () => {
         return (
             <div className="cardsCont">
-                <Card>
-                    <div className="card">
-                        <img className="cardImage" src="../../public/assets/Images/1.jpg" alt="" />
-                        <div className="cardDescription">
-                            <div className="cardDescriptionTitle">Chiken Fajita</div>
-                            <div className="cardDescriptionSubTitle"><span>Ingredients: </span> chiken, tomato, onion, salt, pepper, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quae! Rerum voluptatum odit eos. Quod est culpa quisquam impedit voluptate quos? Odio facilis, voluptate repudiandae aliquam pariatur ex deserunt amet.</div>
-                        </div>
-                    </div>
-                </Card>
+                {
+                    [soups[0].image, soups[1].image, soups[2].image].map((image, index) => {
+                        return (
+                            <Card>
+                                <div className="card">
+                                    <img className="cardImage" src={image} alt="" />
+                                    <div className="cardDescription">
+                                        <div className="cardDescriptionTitle">Chiken Fajita</div>
+                                        <div className="cardDescriptionSubTitle"><span>Ingredients: </span> chiken, tomato, onion, salt, pepper, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quae! Rerum voluptatum odit eos. Quod est culpa quisquam impedit voluptate quos? Odio facilis, voluptate repudiandae aliquam pariatur ex deserunt amet.</div>
+                                    </div>
+                                </div>
+                            </Card>
+                        )
+                    })
 
-                <Card>
-                    <div className="card">
-                        <img className="cardImage" src="../../public/assets/Images/2.jpg" alt="" />
-                        <div className="cardDescription">
-                            <div className="cardDescriptionTitle">Chiken Fajita</div>
-                            <div className="cardDescriptionSubTitle"><span>Ingredients: </span> chiken, tomato, onion, salt, pepper, Lorem, Rerum voluptatum odit eos. Quod est culpa voluptate repudiandae aliquam pariatur ex deserunt amet.</div>
-                        </div>                        </div>
-                </Card>
+                }
+            </div>
+        )
+    }
 
-                <Card>
-                    <div className="card">
+    const BlogCards = () => {
+        return (
+            <div className="blogCardsCont">
+                {
+                    [soups[0].image, soups[1].image, soups[2].image].map((image, index) => {
+                        return (
+                            <div className="blogTile">
+                                <img className="blogTileImage" src={image} alt="" />
+                                <div className="blogTileContentCont">
+                                    <div className="blogTileDescriptionTitle">Chiken Fajita</div>
+                                    <div className="blogTileDescription">chiken, tomato, onion, salt, pepper, Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                </div>
+                            </div>
+                        )
+                    })
 
-                        <img className="cardImage" src="../../public/assets/Images/3.jpg" alt="" />
-                        <div className="cardDescription">
-                            <div className="cardDescriptionTitle">Chiken Fajita</div>
-                            <div className="cardDescriptionSubTitle"><span>Ingredients: </span> chiken, tomato, onion, salt, pepper, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quae! Rerum voluptatum odit eos. Quod est culpa quisquam impedit voluptate quos? Odio facilis, voluptate repudiandae aliquam pariatur ex deserunt amet.</div>
-                        </div>                        </div>
-                </Card>
+                }
             </div>
         )
     }
@@ -115,8 +134,6 @@ const Home: React.FC = () => {
 
                     </div>
                 </Modal>
-
-
             </div>
             <div className="contentCont">
                 <div className="soupCarosoulCont">
@@ -136,16 +153,37 @@ const Home: React.FC = () => {
                     } />
                 </div>
 
+
                 <div className="subTitle">{trendyRecipesSubTitle.split(" ").slice(0, -1).join(" ")}{" "}<span>{trendyRecipesSubTitle.split(" ").slice(-1).join(" ")}</span></div>
 
                 <div className="trendyRecipesCont">
                     <Pagination>
-                        <Cards />
+                        <RecipeCards />
                     </Pagination>
                 </div>
-                {/* <div className="recipesBlogCont"></div>
-                <div className="galleryCont"></div>
-                <div className="subscriptionCont"></div> */}
+                <div className="subTitle">{recipeBlogsSubTitle.split(" ").slice(0, -1).join(" ")}{" "}<span>{recipeBlogsSubTitle.split(" ").slice(-1).join(" ")}</span></div>
+
+                <div className={screenWidth < 1200 ? "recipeBlogsContTablet" : "recipeBlogsContWeb"}>
+                    <div className="blogSection1">
+                        <img src="../../public/assets/Images/4.jpg" className="blogSectinon1Image" />
+                        <div className="blogDate">November 10, 2022</div>
+                        <div className="blogTitle">Chiken Fajita</div>
+                        <div className="blogDescription">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, quae! Rerum voluptatum odit eos. Quod est culpa quisquam impedit voluptate quos? Odio facilis
+                        </div>
+                    </div>
+                    <div className="blogSection2">
+                        <BlogCards />
+                    </div>
+                </div>
+
+
+                <div className="subTitle">{ourGallerySubTitle.split(" ").slice(0, -1).join(" ")}{" "}<span>{ourGallerySubTitle.split(" ").slice(-1).join(" ")}</span></div>
+
+                <div className="ourGalleryCont">
+                    <RecipeCards />
+                </div>
+
 
             </div>
         </div>

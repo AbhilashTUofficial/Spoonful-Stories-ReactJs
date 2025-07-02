@@ -7,7 +7,7 @@
 
 .main{
     background-color: orangered;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #fafaf9;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -38,7 +38,7 @@
 .quotes{
     color: lightgray;
     text-align: center;
-    width: 200px;
+    width: 300px;
     margin: 12px;
     align-self: center;
 }
